@@ -19,6 +19,7 @@ public class ReadTwo
                 String[] input = lineIn.split(",");
                 int sum = 0;
                 for (int i = 0; i < input.length; i ++) {
+
                     sum += Integer.parseInt(input[i]);
                 }
                 System.out.println(sum);

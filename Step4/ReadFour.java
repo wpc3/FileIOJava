@@ -12,7 +12,35 @@ public class ReadFour
      */
         public static void main(String[] args)
         {
+            try {
+                Scanner fileIn = new Scanner(new File("Step4/input.txt"));
+                int sum = 0;
+                while (fileIn.hasNext())
+                {
+
+                    String lineIn = fileIn.nextLine();
+                    String [] input = new String[]{lineIn};
+
+
+                    for (int i = 0; i < input.length; i ++) {
+                        sum = sum + Integer.parseInt(input[i]);
+                    }
+                    System.out.println("Running total: " + sum);
+                }
+            }
+            catch (IOException e) {
+                System.out.println("File not found");
+            }
+        }
+
+
+
+
+
+        }
+
+
+
             // Print out a running total of all the
             // values in the input file.
-        }
-}
+
